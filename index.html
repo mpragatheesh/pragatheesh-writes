@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ta">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,14 @@
     <title>மு. பிரகதீஷ் | Tamil Writer</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;700&display=swap');
+
+        /* YOUR TAMIL FONT */
+        @font-face {
+            font-family: 'PragatheeshTamil';
+            src: url('Tamilri_Chenetfont_10(1).ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
         * {
             box-sizing: border-box;
@@ -18,7 +26,7 @@
         body {
             background: #080808;
             color: #f5f5f5;
-            font-family: 'Noto Sans Tamil', sans-serif;
+            font-family: 'PragatheeshTamil', sans-serif;
         }
 
         header {
@@ -30,7 +38,13 @@
             text-align: center;
 
             background:
-                radial-gradient(circle at center, #5c0000 0%, #210000 35%, #080808 75%);
+                radial-gradient(
+                    circle at center,
+                    #5c0000 0%,
+                    #210000 35%,
+                    #080808 75%
+                );
+
             padding: 30px;
         }
 
@@ -58,10 +72,12 @@
             display: inline-block;
             margin-top: 35px;
             padding: 13px 30px;
+
             border: 1px solid #ff2020;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+
             background: #8b0000;
         }
 
@@ -86,6 +102,7 @@
             background: #151515;
             border: 1px solid #3b1111;
             border-radius: 12px;
+
             padding: 25px;
             margin-bottom: 25px;
         }
@@ -104,102 +121,118 @@
         footer {
             text-align: center;
             padding: 40px 20px;
+
             background: #050505;
             color: #777;
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
+    <header>
 
-    <div class="author">
-        M. PRAGATHEESH
-    </div>
+        <div class="author">
+            M. PRAGATHEESH
+        </div>
 
-    <h1>மு. பிரகதீஷ்</h1>
+        <h1>
+            மு. பிரகதீஷ்
+        </h1>
 
-    <p class="tagline">
-        கதைகள் முடிந்த பிறகும்<br>
-        மனதில் தொடரும் சில இரவுகளுக்காக...
-    </p>
-
-    <a href="#stories" class="button">
-        கதைகளுக்குள் செல்லுங்கள்
-    </a>
-
-</header>
-
-
-<section id="stories">
-
-    <h2 class="section-title">
-        🌙 என் கதைகள்
-    </h2>
-
-    <div class="story-card">
-
-        <h3>🌕 பௌர்ணமி நிலவு</h3>
-
-        <p>
-            ஒரு நிலவு... ஏழு கிராமங்கள்...
-            மறைக்கப்பட்ட ஒரு உலகம்...
+        <p class="tagline">
+            கதைகள் முடிந்த பிறகும்<br>
+            மனதில் தொடரும் சில இரவுகளுக்காக...
         </p>
 
-        <a href="#" class="button">
-            READ STORY
+        <a href="#stories" class="button">
+            கதைகளுக்குள் செல்லுங்கள்
         </a>
 
-    </div>
+    </header>
 
 
-    <div class="story-card">
+    <section id="stories">
 
-        <h3>சண்முகம்</h3>
-
-        <p>
-            மழையில் நனைந்த ஒரு ஓலைக்குடிசையில்
-            தொடங்கிய ஒரு வாழ்க்கைப் பயணம்...
-        </p>
-
-        <a href="#" class="button">
-            READ STORY
-        </a>
-
-    </div>
-
-</section>
+        <h2 class="section-title">
+            🌙 என் கதைகள்
+        </h2>
 
 
-<section>
+        <div class="story-card">
 
-    <h2 class="section-title">
-        📚 புத்தகங்கள்
-    </h2>
+            <h3>
+                🌕 பௌர்ணமி நிலவு
+            </h3>
 
-    <div class="story-card">
+            <p>
+                ஒரு நிலவு... ஏழு கிராமங்கள்...
+                மறைக்கப்பட்ட ஒரு உலகம்...
+            </p>
 
-        <h3>பௌர்ணமி நிலவு தொடர்கள்</h3>
+            <a href="#" class="button">
+                READ STORY
+            </a>
 
-        <p>
-            புத்தகத்தை வாங்குவதற்கு தொடர்ந்து இணைப்பு இருங்கள்....
-        </p>
-
-        <a href="#" class="button">
-            BUY BOOK
-        </a>
-
-    </div>
-
-</section>
+        </div>
 
 
-<footer>
+        <div class="story-card">
 
-    © 2026 மு. பிரகதீஷ்
+            <h3>
+                சண்முகம்
+            </h3>
 
-</footer>
+            <p>
+                மழையில் நனைந்த ஒரு ஓலைக்குடிசையில்
+                தொடங்கிய ஒரு வாழ்க்கைப் பயணம்...
+            </p>
+
+            <a href="#" class="button">
+                READ STORY
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2 class="section-title">
+            📚 புத்தகங்கள்
+        </h2>
+
+
+        <div class="story-card">
+
+            <h3>
+                பௌர்ணமி நிலவு தொடர்கள்
+            </h3>
+
+            <p>
+                புத்தகத்தை வாங்குவதற்கான இணைப்பு
+                விரைவில்...
+            </p>
+
+            <a href="#" class="button">
+                BUY BOOK
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 மு. பிரகதீஷ்
+
+    </footer>
 
 </body>
+
 </html>
