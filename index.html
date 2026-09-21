@@ -334,18 +334,58 @@ section {
 
 
 /* =========================
-   MOON RATING
+   INTERACTIVE MOON RATING
    ========================= */
 
 .moon-rating {
 
     margin-top: 18px;
 
-    font-size: 23px;
+    display: flex;
 
-    letter-spacing: 4px;
+    justify-content: center;
 
-    color: #ff3030;
+    gap: 5px;
+}
+
+.moon-rating button {
+
+    background: none;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    transition: 0.25s;
+}
+
+.moon-rating button:hover {
+
+    transform: scale(1.25);
+
+}
+
+.moon-rating button.selected {
+
+    transform: scale(1.25);
+
+    filter:
+        drop-shadow(0 0 8px #ff3030);
+}
+
+#rating-message {
+
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
 }
 
 
@@ -605,10 +645,17 @@ footer {
             தொடங்கிய ஒரு வாழ்க்கைப் பயணம்...
         </p>
 
-        <div class="moon-rating">
-            🌑 🌒 🌓 🌔 🌕
-        </div>
+       <div class="moon-rating">
 
+    <button onclick="rateMoon(1)">🌑</button>
+    <button onclick="rateMoon(2)">🌒</button>
+    <button onclick="rateMoon(3)">🌓</button>
+    <button onclick="rateMoon(4)">🌔</button>
+    <button onclick="rateMoon(5)">🌕</button>
+
+</div>
+
+<p id="rating-message"></p>
         <a href="pn1.html" class="button">
             READ STORY
         </a>
@@ -691,7 +738,31 @@ footer {
 
 </footer>
 
+<script>
 
+function rateMoon(rating) {
+
+    const moons =
+        document.querySelectorAll('.moon-rating button');
+
+    moons.forEach(function(moon, index) {
+
+        moon.classList.remove('selected');
+
+        if (index < rating) {
+
+            moon.classList.add('selected');
+
+        }
+
+    });
+
+    document.getElementById('rating-message').textContent =
+        "நீங்கள் " + rating + "/5 நிலவு மதிப்பீட்டை வழங்கியுள்ளீர்கள் 🌙";
+
+}
+
+</script>
 </body>
 
 </html>
