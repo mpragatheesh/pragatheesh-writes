@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>மு. பிரகதீஷ் | Tamil Writer</title>
+    <title>மு.பிரகதீஷ் | Tamil Writer</title>
 
     <style>
 
-        /* YOUR TAMIL FONT */
+        /* =========================
+           YOUR TAMIL FONT
+           ========================= */
+
         @font-face {
             font-family: 'PragatheeshTamil';
             src: url('Tamilri_Chenetfont_10%20(1).ttf') format('truetype');
@@ -17,11 +20,17 @@
             font-style: normal;
         }
 
+
+        /* =========================
+           BASIC RESET
+           ========================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
 
         body {
             background: #080808;
@@ -29,101 +38,371 @@
             font-family: 'PragatheeshTamil', sans-serif;
         }
 
+
+        /* =========================
+           TOP HERO
+           ========================= */
+
         header {
+
             min-height: 100vh;
+
             display: flex;
             flex-direction: column;
+
             justify-content: center;
             align-items: center;
+
             text-align: center;
+
+            padding: 30px;
 
             background:
                 radial-gradient(
                     circle at center,
-                    #5c0000 0%,
-                    #210000 35%,
-                    #080808 75%
+                    #650000 0%,
+                    #260000 30%,
+                    #0b0000 60%,
+                    #050505 100%
                 );
 
-            padding: 30px;
+            position: relative;
+
+            overflow: hidden;
         }
 
+
+        /* Soft red glow */
+
+        header::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 0, 0, 0.08);
+
+            filter: blur(60px);
+
+            top: 30%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+
+        /* =========================
+           AUTHOR NAME
+           ========================= */
+
         .author {
-            font-size: 18px;
-            letter-spacing: 4px;
-            color: #d9d9d9;
+
+            position: relative;
+
+            font-family: 'PragatheeshTamil', sans-serif;
+
+            font-size: 40px;
+
+            font-weight: normal;
+
+            letter-spacing: 2px;
+
+            color: #ffffff;
+
+            margin-bottom: 25px;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            box-shadow: none;
+
+            text-shadow:
+                0 0 10px rgba(255, 0, 0, 0.35),
+                0 0 25px rgba(255, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           ENGLISH AUTHOR NAME
+           ========================= */
+
+        .author-en {
+
+            font-family: sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: 6px;
+
+            color: #999;
+
             margin-bottom: 25px;
         }
 
+
+        /* =========================
+           MAIN TITLE
+           ========================= */
+
         h1 {
-            font-size: 42px;
-            color: #ff2020;
-            margin-bottom: 15px;
+
+            position: relative;
+
+            font-family: 'PragatheeshTamil', sans-serif;
+
+            font-size: 20px;
+
+            font-weight: normal;
+
+            color: #ff3030;
+
+            margin-bottom: 20px;
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            box-shadow: none;
         }
+
+
+        /* =========================
+           TAGLINE
+           ========================= */
 
         .tagline {
+
+            position: relative;
+
             font-size: 17px;
+
             color: #cccccc;
-            max-width: 500px;
-            line-height: 1.8;
+
+            max-width: 520px;
+
+            line-height: 2;
+
+            margin-bottom: 10px;
         }
 
+
+        /* =========================
+           BUTTON
+           ========================= */
+
         .button {
+
             display: inline-block;
-            margin-top: 35px;
+
+            margin-top: 30px;
+
             padding: 13px 30px;
 
             border: 1px solid #ff2020;
-            color: white;
+
+            color: #ffffff;
+
             text-decoration: none;
+
             border-radius: 5px;
 
-            background: #8b0000;
+            background: #720000;
+
+            transition: 0.3s;
         }
+
 
         .button:hover {
+
             background: #d00000;
+
+            box-shadow:
+                0 0 20px rgba(255, 0, 0, 0.35);
         }
 
+
+        /* =========================
+           STORY SECTION
+           ========================= */
+
         section {
-            padding: 60px 20px;
+
+            padding: 70px 20px;
+
             max-width: 1000px;
+
             margin: auto;
         }
 
+
         .section-title {
-            color: #ff2020;
-            font-size: 27px;
-            margin-bottom: 30px;
+
+            color: #ff3030;
+
+            font-size: 28px;
+
+            margin-bottom: 35px;
+
             text-align: center;
         }
 
+
+        /* =========================
+           STORY CARD
+           ========================= */
+
         .story-card {
-            background: #151515;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #0d0d0d
+                );
+
             border: 1px solid #3b1111;
+
             border-radius: 12px;
 
-            padding: 25px;
+            padding: 28px;
+
             margin-bottom: 25px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.4);
         }
+
 
         .story-card h3 {
+
             color: #ff3030;
-            font-size: 24px;
-            margin-bottom: 12px;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
         }
 
+
         .story-card p {
+
             color: #cccccc;
+
+            line-height: 2;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           MOON RATING
+           ========================= */
+
+        .moon-rating {
+
+            margin-top: 18px;
+
+            font-size: 23px;
+
+            letter-spacing: 4px;
+
+            color: #ff3030;
+        }
+
+
+        /* =========================
+           BOOK SECTION
+           ========================= */
+
+        .book-card {
+
+            background: #111111;
+
+            border: 1px solid #441111;
+
+            border-radius: 12px;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+
+        .book-card h3 {
+
+            color: #ffffff;
+
+            font-size: 24px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .book-card p {
+
+            color: #aaaaaa;
+
             line-height: 1.8;
         }
 
+
+        /* =========================
+           FOOTER
+           ========================= */
+
         footer {
+
             text-align: center;
-            padding: 40px 20px;
+
+            padding: 45px 20px;
 
             background: #050505;
-            color: #777;
+
+            color: #666;
+
+            border-top: 1px solid #1c0000;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .author {
+                font-size: 34px;
+            }
+
+            .author-en {
+                font-size: 11px;
+                letter-spacing: 4px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .tagline {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+
+            .story-card {
+                padding: 22px;
+            }
         }
 
     </style>
@@ -133,18 +412,26 @@
 
 <body>
 
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
     <header>
 
         <div class="author">
+            மு.பிரகதீஷ்
+        </div>
+
+        <div class="author-en">
             M. PRAGATHEESH
         </div>
 
         <h1>
-            மு. பிரகதீஷ்
+            கதைகள் முடிந்த பிறகும்...
         </h1>
 
         <p class="tagline">
-            கதைகள் முடிந்த பிறகும்<br>
             மனதில் தொடரும் சில இரவுகளுக்காக...
         </p>
 
@@ -155,12 +442,19 @@
     </header>
 
 
+
+    <!-- =========================
+         STORIES
+         ========================= -->
+
     <section id="stories">
 
         <h2 class="section-title">
             🌙 என் கதைகள்
         </h2>
 
+
+        <!-- PN -->
 
         <div class="story-card">
 
@@ -173,12 +467,19 @@
                 மறைக்கப்பட்ட ஒரு உலகம்...
             </p>
 
+            <div class="moon-rating">
+                🌑 🌒 🌓 🌔 🌕
+            </div>
+
             <a href="#" class="button">
                 READ STORY
             </a>
 
         </div>
 
+
+
+        <!-- SHANMUGA -->
 
         <div class="story-card">
 
@@ -191,6 +492,10 @@
                 தொடங்கிய ஒரு வாழ்க்கைப் பயணம்...
             </p>
 
+            <div class="moon-rating">
+                🌑 🌒 🌓 🌔 🌕
+            </div>
+
             <a href="#" class="button">
                 READ STORY
             </a>
@@ -200,6 +505,11 @@
     </section>
 
 
+
+    <!-- =========================
+         BOOKS
+         ========================= -->
+
     <section>
 
         <h2 class="section-title">
@@ -207,14 +517,15 @@
         </h2>
 
 
-        <div class="story-card">
+        <div class="book-card">
 
             <h3>
-                பௌர்ணமி நிலவு தொடர்கள்
+                பௌர்ணமி நிலவு — தொடர்
             </h3>
 
             <p>
-                புத்தகத்தை வாங்குவதற்கான இணைப்பு
+                புத்தகத்தின் வெளியீடு மற்றும்
+                வாங்குவதற்கான இணைப்புகள்
                 விரைவில்...
             </p>
 
@@ -227,11 +538,17 @@
     </section>
 
 
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
     <footer>
 
-        © 2026 மு. பிரகதீஷ்
+        © 2026 மு.பிரகதீஷ்
 
     </footer>
+
 
 </body>
 
